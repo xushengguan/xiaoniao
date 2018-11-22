@@ -43,7 +43,9 @@
       }
     },
     created: function() {
-      this.changeindex = this.$route.query.index;
+      if (this.$route.query.index) {
+        this.changeindex = this.$route.query.index;
+      }
     }
   };
 </script>
@@ -61,8 +63,8 @@
     color: #fff;
   }
   /* .nav img {
-    height: 31px;
-  } */
+      height: 31px;
+    } */
   .navlist li {
     float: left;
     margin-left: 70px;
